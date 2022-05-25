@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		615B8F1B283E1F77002D505F /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B8F1A283E1F77002D505F /* UIDevice.swift */; };
+		61907744283DBB99004524D6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61907743283DBB99004524D6 /* FavoriteViewController.swift */; };
+		61907746283DBBBA004524D6 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61907745283DBBBA004524D6 /* UploadViewController.swift */; };
+		61907748283DBFB2004524D6 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61907747283DBFB2004524D6 /* MyTabBar.swift */; };
+		6190774A283DCC83004524D6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61907749283DCC83004524D6 /* ListViewController.swift */; };
+		61ABDCE5283DD18C0013F61F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ABDCE4283DD18C0013F61F /* Document.swift */; };
+		61ABDCEA283DDDBA0013F61F /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ABDCE9283DDDBA0013F61F /* ImageFormat.swift */; };
+		61ABDCF3283E08720013F61F /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ABDCF1283E08720013F61F /* ListViewCell.swift */; };
+		61ABDCF4283E08720013F61F /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61ABDCF2283E08720013F61F /* ListViewCell.xib */; };
+		61C4892A283B38ED00668ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C48929283B38ED00668ECD /* AppDelegate.swift */; };
+		61C4892C283B38ED00668ECD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4892B283B38ED00668ECD /* SceneDelegate.swift */; };
+		61C48933283B38EE00668ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C48932283B38EE00668ECD /* Assets.xcassets */; };
+		61C4893E283B3ACC00668ECD /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4893D283B3ACC00668ECD /* LaunchScreenViewController.swift */; };
+		61CB2DC4283CAF27005D3789 /* ScreenProtectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB2DC3283CAF27005D3789 /* ScreenProtectionHelper.swift */; };
+		61CB2DC6283CC964005D3789 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB2DC5283CC964005D3789 /* HomeViewController.swift */; };
+		61CB2DC8283CC96F005D3789 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CB2DC7283CC96F005D3789 /* Home.storyboard */; };
+		61CB2DCA283CCCA0005D3789 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB2DC9283CCCA0005D3789 /* UINavigationControllerExtension.swift */; };
+		61F0FAC6283B41F200DAAF01 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F0FAC5283B41F200DAAF01 /* SplashScreen.storyboard */; };
+		61F0FACA283B469D00DAAF01 /* KeypadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FAC8283B469C00DAAF01 /* KeypadCell.swift */; };
+		61F0FACB283B469D00DAAF01 /* KeypadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F0FAC9283B469C00DAAF01 /* KeypadCell.xib */; };
+		61F0FACD283B48B100DAAF01 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FACC283B48B100DAAF01 /* PasscodeViewController.swift */; };
+		61F0FACF283B48C400DAAF01 /* Passcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F0FACE283B48C400DAAF01 /* Passcode.storyboard */; };
+		61F0FAD2283B5A3200DAAF01 /* ANCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FAD1283B5A3200DAAF01 /* ANCustomView.swift */; };
+		61F0FAD4283B5E3C00DAAF01 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FAD3283B5E3C00DAAF01 /* Storyboards.swift */; };
+		61F0FAD7283B5EA900DAAF01 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FAD6283B5EA900DAAF01 /* UIViewController.swift */; };
+		61F0FAD9283B62CB00DAAF01 /* RippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FAD8283B62CB00DAAF01 /* RippleView.swift */; };
+		61F0FADB283B6BD600DAAF01 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FADA283B6BD600DAAF01 /* UIColorExtension.swift */; };
+		61F0FADD283B87A900DAAF01 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0FADC283B87A900DAAF01 /* UIViewExtension.swift */; };
+		61FB9F9B283CD93F003E4E64 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB9F9A283CD93F003E4E64 /* UIButtonExtension.swift */; };
+		B71B7B598131C5709A8DF85A /* Pods_SplashScreen_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7E807C9217A019702477B1 /* Pods_SplashScreen_Twitter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26B58D5B64C004377736D58B /* Pods-SplashScreen-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplashScreen-Twitter.debug.xcconfig"; path = "Target Support Files/Pods-SplashScreen-Twitter/Pods-SplashScreen-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
+		574B8C440688D9A88CC2FC85 /* Pods-SplashScreen-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplashScreen-Twitter.release.xcconfig"; path = "Target Support Files/Pods-SplashScreen-Twitter/Pods-SplashScreen-Twitter.release.xcconfig"; sourceTree = "<group>"; };
+		615B8F1A283E1F77002D505F /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		61907743283DBB99004524D6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		61907745283DBBBA004524D6 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		61907747283DBFB2004524D6 /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		61907749283DCC83004524D6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		61ABDCE4283DD18C0013F61F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		61ABDCE9283DDDBA0013F61F /* ImageFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFormat.swift; sourceTree = "<group>"; };
+		61ABDCF1283E08720013F61F /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		61ABDCF2283E08720013F61F /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
+		61C48926283B38ED00668ECD /* SplashScreen-Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SplashScreen-Twitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61C48929283B38ED00668ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		61C4892B283B38ED00668ECD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		61C48932283B38EE00668ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61C48937283B38EE00668ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61C4893D283B3ACC00668ECD /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		61CB2DC3283CAF27005D3789 /* ScreenProtectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenProtectionHelper.swift; sourceTree = "<group>"; };
+		61CB2DC5283CC964005D3789 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		61CB2DC7283CC96F005D3789 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		61CB2DC9283CCCA0005D3789 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		61F0FAC5283B41F200DAAF01 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		61F0FAC8283B469C00DAAF01 /* KeypadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadCell.swift; sourceTree = "<group>"; };
+		61F0FAC9283B469C00DAAF01 /* KeypadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeypadCell.xib; sourceTree = "<group>"; };
+		61F0FACC283B48B100DAAF01 /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		61F0FACE283B48C400DAAF01 /* Passcode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Passcode.storyboard; sourceTree = "<group>"; };
+		61F0FAD1283B5A3200DAAF01 /* ANCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANCustomView.swift; sourceTree = "<group>"; };
+		61F0FAD3283B5E3C00DAAF01 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		61F0FAD6283B5EA900DAAF01 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		61F0FAD8283B62CB00DAAF01 /* RippleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleView.swift; sourceTree = "<group>"; };
+		61F0FADA283B6BD600DAAF01 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		61F0FADC283B87A900DAAF01 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		61FB9F9A283CD93F003E4E64 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		BB7E807C9217A019702477B1 /* Pods_SplashScreen_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplashScreen_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61C48923283B38ED00668ECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71B7B598131C5709A8DF85A /* Pods_SplashScreen_Twitter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6190774B283DCE0F004524D6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				61ABDCE4283DD18C0013F61F /* Document.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		61ABDCE8283DDDAE0013F61F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				61ABDCE9283DDDBA0013F61F /* ImageFormat.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		61ABDCEB283E07D90013F61F /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				61ABDCEE283E07F40013F61F /* Setting */,
+				61ABDCED283E07EB0013F61F /* Favorite */,
+				61ABDCEC283E07E30013F61F /* List */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		61ABDCEC283E07E30013F61F /* List */ = {
+			isa = PBXGroup;
+			children = (
+				61907749283DCC83004524D6 /* ListViewController.swift */,
+				61ABDCF1283E08720013F61F /* ListViewCell.swift */,
+				61ABDCF2283E08720013F61F /* ListViewCell.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		61ABDCED283E07EB0013F61F /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				61907743283DBB99004524D6 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		61ABDCEE283E07F40013F61F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		61C4891D283B38ED00668ECD = {
+			isa = PBXGroup;
+			children = (
+				61C48928283B38ED00668ECD /* SplashScreen-Twitter */,
+				61C48927283B38ED00668ECD /* Products */,
+				C649BA6A189B68F958595035 /* Pods */,
+				ABA0059B0A9E9EB9A4F4DA31 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		61C48927283B38ED00668ECD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61C48926283B38ED00668ECD /* SplashScreen-Twitter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61C48928283B38ED00668ECD /* SplashScreen-Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				61ABDCEB283E07D90013F61F /* Tab */,
+				61ABDCE8283DDDAE0013F61F /* Enum */,
+				6190774B283DCE0F004524D6 /* Data */,
+				61CB2DC1283C8318005D3789 /* Helper */,
+				61F0FAD5283B5E9100DAAF01 /* Extension */,
+				61F0FAD0283B5A2800DAAF01 /* Custom */,
+				61F0FAC7283B45FF00DAAF01 /* Passcode */,
+				61C48929283B38ED00668ECD /* AppDelegate.swift */,
+				61C4892B283B38ED00668ECD /* SceneDelegate.swift */,
+				61C48932283B38EE00668ECD /* Assets.xcassets */,
+				61C48937283B38EE00668ECD /* Info.plist */,
+				61C4893D283B3ACC00668ECD /* LaunchScreenViewController.swift */,
+				61F0FAC5283B41F200DAAF01 /* SplashScreen.storyboard */,
+				61F0FAD3283B5E3C00DAAF01 /* Storyboards.swift */,
+				61CB2DC5283CC964005D3789 /* HomeViewController.swift */,
+				61CB2DC7283CC96F005D3789 /* Home.storyboard */,
+				61907745283DBBBA004524D6 /* UploadViewController.swift */,
+			);
+			path = "SplashScreen-Twitter";
+			sourceTree = "<group>";
+		};
+		61CB2DC1283C8318005D3789 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				61CB2DC3283CAF27005D3789 /* ScreenProtectionHelper.swift */,
+				61907747283DBFB2004524D6 /* MyTabBar.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		61F0FAC7283B45FF00DAAF01 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				61F0FAC8283B469C00DAAF01 /* KeypadCell.swift */,
+				61F0FAC9283B469C00DAAF01 /* KeypadCell.xib */,
+				61F0FACC283B48B100DAAF01 /* PasscodeViewController.swift */,
+				61F0FACE283B48C400DAAF01 /* Passcode.storyboard */,
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		61F0FAD0283B5A2800DAAF01 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				61F0FAD1283B5A3200DAAF01 /* ANCustomView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		61F0FAD5283B5E9100DAAF01 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				61F0FAD6283B5EA900DAAF01 /* UIViewController.swift */,
+				61F0FAD8283B62CB00DAAF01 /* RippleView.swift */,
+				61F0FADA283B6BD600DAAF01 /* UIColorExtension.swift */,
+				61F0FADC283B87A900DAAF01 /* UIViewExtension.swift */,
+				61CB2DC9283CCCA0005D3789 /* UINavigationControllerExtension.swift */,
+				61FB9F9A283CD93F003E4E64 /* UIButtonExtension.swift */,
+				615B8F1A283E1F77002D505F /* UIDevice.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ABA0059B0A9E9EB9A4F4DA31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7E807C9217A019702477B1 /* Pods_SplashScreen_Twitter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C649BA6A189B68F958595035 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26B58D5B64C004377736D58B /* Pods-SplashScreen-Twitter.debug.xcconfig */,
+				574B8C440688D9A88CC2FC85 /* Pods-SplashScreen-Twitter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61C48925283B38ED00668ECD /* SplashScreen-Twitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61C4893A283B38EE00668ECD /* Build configuration list for PBXNativeTarget "SplashScreen-Twitter" */;
+			buildPhases = (
+				9C783691C5AC9C80AC19A104 /* [CP] Check Pods Manifest.lock */,
+				61C48922283B38ED00668ECD /* Sources */,
+				61C48923283B38ED00668ECD /* Frameworks */,
+				61C48924283B38ED00668ECD /* Resources */,
+				710722F0F22BCF8E9268F858 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SplashScreen-Twitter";
+			productName = "SplashScreen-Twitter";
+			productReference = 61C48926283B38ED00668ECD /* SplashScreen-Twitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61C4891E283B38ED00668ECD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					61C48925283B38ED00668ECD = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 61C48921283B38ED00668ECD /* Build configuration list for PBXProject "SplashScreen-Twitter" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61C4891D283B38ED00668ECD;
+			productRefGroup = 61C48927283B38ED00668ECD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61C48925283B38ED00668ECD /* SplashScreen-Twitter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61C48924283B38ED00668ECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F0FAC6283B41F200DAAF01 /* SplashScreen.storyboard in Resources */,
+				61CB2DC8283CC96F005D3789 /* Home.storyboard in Resources */,
+				61ABDCF4283E08720013F61F /* ListViewCell.xib in Resources */,
+				61F0FACB283B469D00DAAF01 /* KeypadCell.xib in Resources */,
+				61C48933283B38EE00668ECD /* Assets.xcassets in Resources */,
+				61F0FACF283B48C400DAAF01 /* Passcode.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		710722F0F22BCF8E9268F858 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SplashScreen-Twitter/Pods-SplashScreen-Twitter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SplashScreen-Twitter/Pods-SplashScreen-Twitter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SplashScreen-Twitter/Pods-SplashScreen-Twitter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C783691C5AC9C80AC19A104 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SplashScreen-Twitter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61C48922283B38ED00668ECD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61ABDCF3283E08720013F61F /* ListViewCell.swift in Sources */,
+				61F0FAD9283B62CB00DAAF01 /* RippleView.swift in Sources */,
+				61907746283DBBBA004524D6 /* UploadViewController.swift in Sources */,
+				61F0FAD4283B5E3C00DAAF01 /* Storyboards.swift in Sources */,
+				61F0FAD7283B5EA900DAAF01 /* UIViewController.swift in Sources */,
+				61ABDCE5283DD18C0013F61F /* Document.swift in Sources */,
+				61C4892A283B38ED00668ECD /* AppDelegate.swift in Sources */,
+				61907748283DBFB2004524D6 /* MyTabBar.swift in Sources */,
+				615B8F1B283E1F77002D505F /* UIDevice.swift in Sources */,
+				61CB2DC6283CC964005D3789 /* HomeViewController.swift in Sources */,
+				61F0FACA283B469D00DAAF01 /* KeypadCell.swift in Sources */,
+				6190774A283DCC83004524D6 /* ListViewController.swift in Sources */,
+				61907744283DBB99004524D6 /* FavoriteViewController.swift in Sources */,
+				61F0FADD283B87A900DAAF01 /* UIViewExtension.swift in Sources */,
+				61CB2DCA283CCCA0005D3789 /* UINavigationControllerExtension.swift in Sources */,
+				61CB2DC4283CAF27005D3789 /* ScreenProtectionHelper.swift in Sources */,
+				61C4893E283B3ACC00668ECD /* LaunchScreenViewController.swift in Sources */,
+				61F0FADB283B6BD600DAAF01 /* UIColorExtension.swift in Sources */,
+				61FB9F9B283CD93F003E4E64 /* UIButtonExtension.swift in Sources */,
+				61F0FACD283B48B100DAAF01 /* PasscodeViewController.swift in Sources */,
+				61ABDCEA283DDDBA0013F61F /* ImageFormat.swift in Sources */,
+				61C4892C283B38ED00668ECD /* SceneDelegate.swift in Sources */,
+				61F0FAD2283B5A3200DAAF01 /* ANCustomView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		61C48938283B38EE00668ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		61C48939283B38EE00668ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61C4893B283B38EE00668ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26B58D5B64C004377736D58B /* Pods-SplashScreen-Twitter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XWZWNDYQK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SplashScreen-Twitter/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Passcode;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ivan.SplashScreen-Twitter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		61C4893C283B38EE00668ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 574B8C440688D9A88CC2FC85 /* Pods-SplashScreen-Twitter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XWZWNDYQK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SplashScreen-Twitter/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Passcode;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ivan.SplashScreen-Twitter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61C48921283B38ED00668ECD /* Build configuration list for PBXProject "SplashScreen-Twitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61C48938283B38EE00668ECD /* Debug */,
+				61C48939283B38EE00668ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61C4893A283B38EE00668ECD /* Build configuration list for PBXNativeTarget "SplashScreen-Twitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61C4893B283B38EE00668ECD /* Debug */,
+				61C4893C283B38EE00668ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61C4891E283B38ED00668ECD /* Project object */;
+}

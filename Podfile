@@ -8,4 +8,8 @@ target 'SplashScreen-Twitter' do
   # Pods for SplashScreen-Twitter
   pod 'SwiftIcons', '~> 3.0'
   pod 'RealmSwift'
+  pod 'Lightbox'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RNCryptor'
 end

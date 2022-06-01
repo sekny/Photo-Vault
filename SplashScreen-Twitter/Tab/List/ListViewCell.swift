@@ -10,20 +10,38 @@ import UIKit
 class ListViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
 
+    @IBOutlet weak var contentViewOverlay: UIView!
+    @IBOutlet weak var tickIcon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
 
-//        self.imageView.layer.masksToBounds = true
+        tickIcon.layer.borderWidth = 1
+        tickIcon.layer.masksToBounds = false
+        tickIcon.layer.borderColor = UIColor.systemBlue.cgColor
+        tickIcon.layer.cornerRadius = tickIcon.frame.height/2
+        tickIcon.clipsToBounds = true
+        tickIcon.isHidden = true
+        contentViewOverlay.isHidden = true
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = .red
     }
     
     func setImage(image: UIImage) {
         self.imageView.image = image
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.backgroundColor = .lightGray
+    }
+    
+    func showTickIcon() {
+        self.tickIcon.isHidden = false
+        self.isSelected = true
+        self.contentViewOverlay.isHidden = false
+    }
+    func hideTickIcon() {
+        self.tickIcon.isHidden = true
+        self.isSelected = false
+        self.contentViewOverlay.isHidden = true
     }
 }

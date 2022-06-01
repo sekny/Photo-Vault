@@ -18,8 +18,145 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-qe-a2S" userLabel="Confirm PIN View">
+                                <rect key="frame" x="20" y="340.5" width="374" height="95"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm PIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-JQ-zME">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-Hn-K9R">
+                                        <rect key="frame" x="112" y="50.5" width="150" height="26"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFV-ge-Rh5" customClass="ANCustomView" customModule="SplashScreen_Twitter" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
+                                                <color key="backgroundColor" name="lightDark"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="PV8-W4-t4a"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="textColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-Il-vNu" customClass="ANCustomView" customModule="SplashScreen_Twitter" customModuleProvider="target">
+                                                <rect key="frame" x="41.5" y="0.0" width="26" height="26"/>
+                                                <color key="backgroundColor" name="lightDark"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="JSU-Pl-CE6"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="textColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpg-3o-5Vq" customClass="ANCustomView" customModule="SplashScreen_Twitter" customModuleProvider="target">
+                                                <rect key="frame" x="82.5" y="0.0" width="26" height="26"/>
+                                                <color key="backgroundColor" name="lightDark"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="W61-h8-7ra"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="textColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kK4-vF-nis" customClass="ANCustomView" customModule="SplashScreen_Twitter" customModuleProvider="target">
+                                                <rect key="frame" x="124" y="0.0" width="26" height="26"/>
+                                                <color key="backgroundColor" name="lightDark"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="JPv-FV-tFJ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="textColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Lpz-za-MAi"/>
+                                            <constraint firstAttribute="height" constant="26" id="mYh-XA-7e2"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="Confirm PIN View"/>
+                                <constraints>
+                                    <constraint firstItem="Ag1-JQ-zME" firstAttribute="top" secondItem="vzv-qe-a2S" secondAttribute="top" id="6wh-DU-EEt"/>
+                                    <constraint firstItem="ImB-Hn-K9R" firstAttribute="centerX" secondItem="vzv-qe-a2S" secondAttribute="centerX" id="E2N-90-93A"/>
+                                    <constraint firstItem="Ag1-JQ-zME" firstAttribute="centerX" secondItem="vzv-qe-a2S" secondAttribute="centerX" id="V2g-gY-UGc"/>
+                                    <constraint firstItem="Ag1-JQ-zME" firstAttribute="width" secondItem="vzv-qe-a2S" secondAttribute="width" id="Zbv-Sb-K6Y"/>
+                                    <constraint firstItem="ImB-Hn-K9R" firstAttribute="top" secondItem="Ag1-JQ-zME" secondAttribute="bottom" constant="30" id="g0I-lO-AI5"/>
+                                    <constraint firstItem="Ag1-JQ-zME" firstAttribute="leading" secondItem="vzv-qe-a2S" secondAttribute="leading" id="jBl-r8-0Ue"/>
+                                    <constraint firstAttribute="height" constant="95" id="mTK-qa-vSH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ag1-JQ-zME" secondAttribute="trailing" id="tjb-6E-dd2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-d3-ezH">
+                                <rect key="frame" x="40" y="455.5" width="334" height="406.5"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MNu-Iz-xvn">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="406.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mpD-kg-W65">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeypadCellIdentifier" id="Plp-TG-asK" customClass="KeypadCell" customModule="SplashScreen_Twitter" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EAJ-qR-RxC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MNu-Iz-xvn" firstAttribute="top" secondItem="AzT-d3-ezH" secondAttribute="top" id="0s2-7r-2I2"/>
+                                    <constraint firstItem="MNu-Iz-xvn" firstAttribute="leading" secondItem="AzT-d3-ezH" secondAttribute="leading" id="FG1-2a-dsR"/>
+                                    <constraint firstAttribute="bottom" secondItem="MNu-Iz-xvn" secondAttribute="bottom" id="a9L-Xy-jaK"/>
+                                    <constraint firstAttribute="trailing" secondItem="MNu-Iz-xvn" secondAttribute="trailing" id="cX2-tC-muI"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JIn-95-nIZ">
-                                <rect key="frame" x="167" y="275" width="80" height="79"/>
+                                <rect key="frame" x="167" y="134.5" width="80" height="79"/>
                                 <color key="tintColor" name="textColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="OlB-FC-wnm"/>
@@ -27,13 +164,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUc-h1-VK1">
-                                <rect key="frame" x="20" y="384.5" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="244" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ggp-Ec-j2b">
-                                <rect key="frame" x="132" y="435" width="150" height="26"/>
+                                <rect key="frame" x="132" y="294.5" width="150" height="26"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBv-zw-8Q3" customClass="ANCustomView" customModule="SplashScreen_Twitter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
@@ -115,64 +252,36 @@
                                     <constraint firstAttribute="height" constant="26" id="iP0-5V-Wvo"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-d3-ezH">
-                                <rect key="frame" x="40" y="481" width="334" height="381"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MNu-Iz-xvn">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="381"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mpD-kg-W65">
-                                            <size key="itemSize" width="128" height="128"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeypadCellIdentifier" id="Plp-TG-asK" customClass="KeypadCell" customModule="SplashScreen_Twitter" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EAJ-qR-RxC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="MNu-Iz-xvn" firstAttribute="top" secondItem="AzT-d3-ezH" secondAttribute="top" id="0s2-7r-2I2"/>
-                                    <constraint firstItem="MNu-Iz-xvn" firstAttribute="leading" secondItem="AzT-d3-ezH" secondAttribute="leading" id="FG1-2a-dsR"/>
-                                    <constraint firstAttribute="bottom" secondItem="MNu-Iz-xvn" secondAttribute="bottom" id="a9L-Xy-jaK"/>
-                                    <constraint firstAttribute="trailing" secondItem="MNu-Iz-xvn" secondAttribute="trailing" id="cX2-tC-muI"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="bgDark"/>
                         <constraints>
                             <constraint firstItem="ggp-Ec-j2b" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9cA-Vy-nOE"/>
                             <constraint firstItem="AzT-d3-ezH" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Apb-Zs-ZKg"/>
+                            <constraint firstItem="AzT-d3-ezH" firstAttribute="top" secondItem="vzv-qe-a2S" secondAttribute="bottom" constant="20" id="Ar7-Dr-swl"/>
                             <constraint firstItem="XUc-h1-VK1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="BZH-Lh-daQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XUc-h1-VK1" secondAttribute="trailing" constant="20" id="BrW-Ya-6bQ"/>
+                            <constraint firstItem="AzT-d3-ezH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EzG-bX-aFE"/>
+                            <constraint firstItem="vzv-qe-a2S" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-60" id="HeW-gP-Tau"/>
                             <constraint firstItem="ggp-Ec-j2b" firstAttribute="top" secondItem="XUc-h1-VK1" secondAttribute="bottom" constant="30" id="Kpu-6s-1tk"/>
-                            <constraint firstItem="AzT-d3-ezH" firstAttribute="top" secondItem="ggp-Ec-j2b" secondAttribute="bottom" constant="20" id="N3M-wO-Aa9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AzT-d3-ezH" secondAttribute="trailing" constant="40" id="RIA-jF-h9V"/>
+                            <constraint firstItem="vzv-qe-a2S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ut4-Ir-PTJ"/>
+                            <constraint firstItem="vzv-qe-a2S" firstAttribute="top" secondItem="ggp-Ec-j2b" secondAttribute="bottom" constant="20" id="X7F-gg-DHb"/>
                             <constraint firstItem="AzT-d3-ezH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="bG3-As-o8m"/>
-                            <constraint firstItem="ggp-Ec-j2b" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="daX-rw-O0g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vzv-qe-a2S" secondAttribute="trailing" constant="20" id="e3r-SD-G6A"/>
                             <constraint firstItem="XUc-h1-VK1" firstAttribute="top" secondItem="JIn-95-nIZ" secondAttribute="bottom" constant="30" id="hGf-xP-ohh"/>
+                            <constraint firstItem="vzv-qe-a2S" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kAc-Cs-HoW"/>
                             <constraint firstItem="JIn-95-nIZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kxr-XN-nWW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmLabel" destination="Ag1-JQ-zME" id="ojo-S7-oz1"/>
+                        <outlet property="confirmPINContainerView" destination="vzv-qe-a2S" id="shU-JN-QcU"/>
+                        <outlet property="confirmPINStackView" destination="ImB-Hn-K9R" id="2cX-vx-xLy"/>
                         <outlet property="icon" destination="JIn-95-nIZ" id="TmK-Lz-Nty"/>
                         <outlet property="keyPadCollection" destination="MNu-Iz-xvn" id="Mfn-En-KVA"/>
                         <outlet property="label" destination="XUc-h1-VK1" id="PMi-7y-uDW"/>
-                        <outlet property="pin1" destination="OBv-zw-8Q3" id="E8R-CX-iCH"/>
-                        <outlet property="pin2" destination="17g-aR-cec" id="XQw-oR-IAw"/>
-                        <outlet property="pin3" destination="vjP-5B-lTG" id="gAb-uN-eAC"/>
-                        <outlet property="pin4" destination="hNk-w5-3xb" id="vBq-vC-ONf"/>
+                        <outlet property="logo" destination="JIn-95-nIZ" id="DjT-3b-yLM"/>
                         <outlet property="pinContainerView" destination="ggp-Ec-j2b" id="iTz-iI-pyD"/>
                     </connections>
                 </viewController>

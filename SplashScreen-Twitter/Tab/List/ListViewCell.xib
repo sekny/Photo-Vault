@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,22 +20,45 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="khqr-banner-original" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-sx-KHX">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" id="uSY-Nq-5W9">
+                        <rect key="frame" x="-182" y="-423" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JhC-IW-Z25"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-Tr-CUh">
+                        <rect key="frame" x="20" y="5.5" width="25" height="24"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Bb4-aO-3PP"/>
+                            <constraint firstAttribute="width" constant="25" id="Mrb-DB-brN"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QYm-sx-KHX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5nG-ta-7KI"/>
+                    <constraint firstAttribute="trailing" secondItem="I7G-Tr-CUh" secondAttribute="trailing" constant="5" id="77a-YT-11z"/>
                     <constraint firstAttribute="bottom" secondItem="QYm-sx-KHX" secondAttribute="bottom" id="QGc-TT-aOK"/>
                     <constraint firstAttribute="trailing" secondItem="QYm-sx-KHX" secondAttribute="trailing" id="ivV-YB-V89"/>
                     <constraint firstItem="QYm-sx-KHX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kMq-f0-sXF"/>
+                    <constraint firstItem="I7G-Tr-CUh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ndc-T1-QDf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentViewOverlay" destination="uSY-Nq-5W9" id="XyC-Rm-FP7"/>
                 <outlet property="imageView" destination="QYm-sx-KHX" id="6gR-c5-kFo"/>
+                <outlet property="tickIcon" destination="I7G-Tr-CUh" id="Hcs-oU-w8r"/>
             </connections>
             <point key="canvasLocation" x="-126.08695652173914" y="31.473214285714285"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="khqr-banner-original" width="1920" height="500"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

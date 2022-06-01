@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let vc = storyboard.instantiateViewController(identifier: Storyboards.Passcode.rawValue)
 //        window?.rootViewController = vc
 //        window?.makeKeyAndVisible()
+        
+        let config = Realm.Configuration(
+            schemaVersion: 6, // Set the new schema version.
+            migrationBlock: { migration, oldSchemaVersion in
+//                if oldSchemaVersion < 2 {
+//
+//                }
+            }
+        )
+        
+        Realm.Configuration.defaultConfiguration = config
         
         return true
     }

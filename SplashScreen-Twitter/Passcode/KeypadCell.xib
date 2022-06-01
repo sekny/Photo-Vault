@@ -25,6 +25,7 @@
                             <constraint firstAttribute="width" secondItem="drS-CE-Pt0" secondAttribute="height" multiplier="1:1" id="WV5-7H-4T6"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <color key="tintColor" name="textColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="0">
                             <color key="titleColor" name="textColor"/>

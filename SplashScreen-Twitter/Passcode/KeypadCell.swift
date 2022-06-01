@@ -14,7 +14,6 @@ class KeypadCell: UICollectionViewCell {
     static let cellNib = UINib.init(nibName: "KeypadCell", bundle: Bundle.main)
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
     func setTitle(title: String) {
@@ -24,7 +23,7 @@ class KeypadCell: UICollectionViewCell {
     func setImage(image: UIImage){
         btnKeypad.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
         btnKeypad.imageView?.contentMode = .scaleAspectFit
-        btnKeypad.contentHorizontalAlignment = .center;
+        btnKeypad.contentHorizontalAlignment = .center
     }
 }
 

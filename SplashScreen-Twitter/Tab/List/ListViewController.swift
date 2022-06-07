@@ -28,6 +28,7 @@ class ListViewController: UIViewController {
     var disposeBag = DisposeBag()
     var arrSelectedIndex = [IndexPath]()
     var idToDeletes: [UUID] = []
+    var imageList: [LightboxImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,15 @@ class ListViewController: UIViewController {
                 } else {
                     self.btnDeleteAll.isEnabled = true
                     self.btnDelete.isEnabled = false
+                }
+                
+                self.imageList = []
+                
+                for item in self.viewModel.items.value {
+                    if item.isImage {
+                        let imageData = NSData(data: item.file! as Data)
+                        self.imageList.append(LightboxImage(image: UIImage(data: imageData as Data)!))
+                    }
                 }
             }.disposed(by: disposeBag)
         
@@ -82,20 +92,35 @@ class ListViewController: UIViewController {
         
         let actionAlertDelete = UIAlertAction(title: "Delete", style: .default, handler: { (action: UIAlertAction!) in
             self.deleteFromDB()
-      })
+        })
         actionAlertDelete.setValue(UIColor.red, forKey: "titleTextColor")
         refreshAlert.addAction(actionAlertDelete)
 
         refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
               
         }))
+        
+        for item in viewModel.items.value {
+            if item.isImage {
+                let imageData = NSData(data: item.file! as Data)
+                imageList.append(LightboxImage(image: UIImage(data: imageData as Data)!))
+            }
+        }
+        
+        setLightboxConfig()
+    }
+    
+    func setLightboxConfig() {
+        LightboxConfig.preload = 2
+        LightboxConfig.InfoLabel.enabled = false
+        LightboxConfig.CloseButton.enabled = true
     }
     
     func initCollectionViewConfig() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         listCollection.collectionViewLayout = layout
-        
+        listCollection.backgroundColor = .clear
         let nib = UINib(nibName: ListViewCell.className, bundle: nil)
         listCollection.register(nib, forCellWithReuseIdentifier: ListViewCell.className)
         listCollection.delegate = self
@@ -210,6 +235,14 @@ class ListViewController: UIViewController {
     
     func deleteFromDB() {
         viewModel.upateToDeleteObjects(idToDeletes)
+        resetAction()
+    }
+    
+    func resetAction() {
+        arrSelectedIndex = []
+        idToDeletes = []
+//        imageList = []
+        listCollection.reloadData()
         self.addButtonSelectToAppBar()
     }
     
@@ -233,21 +266,12 @@ class ListViewController: UIViewController {
             
             self.toggleButtonDelete(arrSelectedIndex.count > 0)
         } else {
-            var imageList: [LightboxImage] = []
-            
-            for item in viewModel.items.value {
-                if item.isImage {
-                    let imageData = NSData(data: item.file! as Data)
-                    imageList.append(LightboxImage(image: UIImage(data: imageData as Data)!))
-                }
-            }
-            let controller = LightboxController(images: imageList)
+            let controller = LightboxController(images: imageList, startIndex: indexPath.row)
             controller.dynamicBackground = true
             
             present(controller, animated: true, completion: nil)
         }
     }
-
 }
 
 extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -261,7 +285,8 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListViewCell.className, for: indexPath) as! ListViewCell
         
-        let imageSrc = UIImage(data: model.file! as Data)
+        
+        let imageSrc = UIImage(data: (model.thumnail != nil ? model.thumnail! : model.file!) as Data)
         if imageSrc != nil {
             cell.setImage(image: imageSrc!)
         }

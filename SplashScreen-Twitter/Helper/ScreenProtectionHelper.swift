@@ -23,8 +23,7 @@ class ScreenProtectionHelper {
             privacyProtectionWindow = UIWindow(frame: UIScreen.main.bounds)
         }
 
-        let storyboard = UIStoryboard(name: Storyboards.Passcode.rawValue, bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: Storyboards.Passcode.rawValue)
+        let vc = PasscodeViewController.instantiateVC(storyboardName: Storyboards.Passcode.rawValue)
         privacyProtectionWindow?.rootViewController = vc
         privacyProtectionWindow?.windowLevel = .alert + 1
         privacyProtectionWindow?.makeKeyAndVisible()

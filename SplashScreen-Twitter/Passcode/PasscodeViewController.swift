@@ -19,18 +19,45 @@ class PasscodeViewController: UIViewController {
     @IBOutlet weak var confirmPINStackView: UIStackView!
     @IBOutlet weak var pinContainerView: UIStackView!
     @IBOutlet weak var keyPadCollection: UICollectionView!
+    var isChangePasscode: Bool = false
     var timer = Timer()
     var counter: Int = 0
     var viewModel = PassCodeViewModel()
     var disposeBag = DisposeBag()
+    let confirmPINNotMatchNewPIN = "Change PIN Failed"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.getData()
         setup()
-        subscribeEvent()
 //        viewModel.reset()
         startTimer()
+    }
+    
+    private func setup() {
+        if isChangePasscode {
+            label.text = "Old passcode"
+        } else {
+            label.text = "Enter your passcode"
+        }
+        confirmPINContainerView.isHidden = true
+        logo.tintColor = UIColor.textColor()
+        label.textColor = UIColor.textColor()
+        confirmLabel.textColor = UIColor.textColor()
+        self.view.backgroundColor = UIColor.bgColor()
+        fillDotColor()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        keyPadCollection.collectionViewLayout = layout
+        keyPadCollection.register(KeypadCell.cellNib, forCellWithReuseIdentifier: KeypadCell.cellIdentifier)
+        keyPadCollection.delegate = self
+        keyPadCollection.dataSource = self
+        keyPadCollection.reloadData()
+        
+        
+        let dialog = UIAlertController(title:"Change PIN", message:"Change PIN Failed", preferredStyle: .alert)
+        let okAction = UIAlertAction(title:"OK", style: .default, handler: {(alert:UIAlertAction!)-> Void in})
+        dialog.addAction(okAction)
     }
     
     
@@ -63,35 +90,85 @@ class PasscodeViewController: UIViewController {
         timer.invalidate()
     }
     
-    private func setup() {
-        logo.tintColor = UIColor.textColor()
-        confirmPINContainerView.isHidden = true
-        label.textColor = UIColor.textColor()
-        confirmLabel.textColor = UIColor.textColor()
-        self.view.backgroundColor = UIColor.bgColor()
+    
+    private func countWrongPIN() {
+        viewModel.clearPIN()
+        self.pinContainerView.shake(isVibrate: true)
+        viewModel.wrongPassword()
+        startTimer()
+    }
+    
+    private func validatePIN(_ PINDigit: String) {
+        viewModel.setPIN(PINDigit)
         fillDotColor()
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        keyPadCollection.collectionViewLayout = layout
-        keyPadCollection.register(KeypadCell.cellNib, forCellWithReuseIdentifier: KeypadCell.cellIdentifier)
-        keyPadCollection.delegate = self
-        keyPadCollection.dataSource = self
-        keyPadCollection.reloadData()
+        if viewModel.PINCode.count == viewModel.PINLength * (viewModel.isHasAccount ? 1 : 2) {
+            if viewModel.isHasAccount {
+                if viewModel.isValidUser(String(viewModel.PINCode.prefix(4))) {
+                    goToHomeScreen()
+                } else {
+                    countWrongPIN()
+                }
+            } else {
+                if viewModel.isValidPIN {
+                    viewModel.insert()
+                    goToHomeScreen()
+                } else {
+                    viewModel.clearPIN()
+                    self.confirmPINStackView.shake(isVibrate: true)
+                }
+            }
+            fillDotColor()
+        }
+        
+        if !viewModel.isHasAccount && viewModel.PINCode.count >= viewModel.PINLength {
+            confirmPINContainerView.isHidden = false
+        }
     }
     
-    func subscribeEvent() {
-//        viewModel
-//            .user
-//            .observe(on: MainScheduler.instance)
-//            .subscribe { [weak self]  item in
-//                guard let self = self else{return}
-//                print("subscribe user")
-//                if !self.viewModel.isHasAccount {
-//                    self.confirmPINContainerView.isHidden = false
-//                }
-//            }.disposed(by: disposeBag)
+    private func validateChangePIN(_ PINDigit: String) {
+        if viewModel.PINCode.count < viewModel.PINLength {
+            viewModel.setPIN(PINDigit)
+        } else {
+            viewModel.setNewPIN(PINDigit)
+        }
+        
+        fillDotColor()
+        
+        if viewModel.PINCode.count <= viewModel.PINLength - 1 {
+            return
+        } else if viewModel.PINCode.count >= viewModel.PINLength && viewModel.isValidUser(String(viewModel.PINCode.prefix(4))) {
+            confirmPINContainerView.isHidden = false
+            let newPINs = viewModel.NewPINCode
+            label.text = "New passcode"
+            confirmLabel.text = "Confirm passcode"
+            
+            if newPINs.count == viewModel.PINLength * 2 {
+                if viewModel.isValidUser(String(newPINs.prefix(4))) {
+                    viewModel.clearPIN()
+                    fillDotColor()
+                    alertWrongChangePIN("Your new PIN should not the same previous PIN.")
+                } else if String(newPINs.prefix(4)) != String(newPINs.suffix(4)) {
+                    viewModel.clearPIN()
+                    fillDotColor()
+                    alertWrongChangePIN("Confirm PIN does not match to new PIN.")
+                } else {
+                    viewModel.changePIN(String(newPINs.suffix(4)))
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        } else {
+            alertWrongChangePIN("Incorrect PIN.")
+            viewModel.clearPIN()
+            fillDotColor()
+        }
     }
     
+    private func alertWrongChangePIN(_ message: String) {
+        let dialog = UIAlertController(title:"Change PIN Failed", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title:"OK", style: .default, handler: {(alert:UIAlertAction!)-> Void in})
+        dialog.addAction(okAction)
+        self.present(dialog, animated:true, completion:nil)
+    }
     
     private func onTapped(_ index: Int) {
         if viewModel.isDisabled {
@@ -99,36 +176,16 @@ class PasscodeViewController: UIViewController {
         }
         let value = viewModel.keyValues[index]
         if(value == "x") {
+            if isChangePasscode && viewModel.NewPINCode.isEmpty && viewModel.isValidUser(String(viewModel.PINCode.prefix(4))) {
+                 return
+            }
             viewModel.deleteLastPIN()
             fillDotColor()
         } else {
-            viewModel.setPIN(value)
-            fillDotColor()
-            if viewModel.PINCode.count == viewModel.PINLength * (viewModel.isHasAccount ? 1 : 2) {
-                if viewModel.isHasAccount {
-                    if viewModel.isValidUser(String(viewModel.PINCode.prefix(4))) {
-                        goToHomeScreen()
-                    } else {
-                        viewModel.clearPIN()
-                        self.pinContainerView.shake(isVibrate: true)
-                        viewModel.wrongPassword()
-                        startTimer()
-                    }
-                } else {
-                    if viewModel.isValidPIN {
-                        viewModel.insert()
-                        goToHomeScreen()
-                    } else {
-                        viewModel.clearPIN()
-                        self.confirmPINStackView.shake(isVibrate: true)
-                        viewModel.wrongPIN()
-                    }
-                }
-                fillDotColor()
-            }
-            
-            if !viewModel.isHasAccount && viewModel.PINCode.count >= viewModel.PINLength {
-                confirmPINContainerView.isHidden = false
+            if isChangePasscode {
+                validateChangePIN(value)
+            } else {
+                validatePIN(value)
             }
         }
     }
@@ -146,17 +203,15 @@ class PasscodeViewController: UIViewController {
     
     private func fillDotColor() {
         for item in 1...(viewModel.PINLength * 2) {
+            let targetPIN = isChangePasscode && viewModel.PINCode.count >= viewModel.PINLength ? viewModel.NewPINCode.count : viewModel.PINCode.count
             if item < 5 {
-                pinContainerView.arrangedSubviews[item - 1].backgroundColor = item <= viewModel.PINCode.count ?  UIColor.textColor() : UIColor.lightDark()
+                pinContainerView.arrangedSubviews[item - 1].backgroundColor = item <= targetPIN ?  UIColor.textColor() : UIColor.lightDark()
             } else {
-                confirmPINStackView.arrangedSubviews[item - 4 - 1].backgroundColor = item <= viewModel.PINCode.count ?  UIColor.textColor() : UIColor.lightDark()
+                confirmPINStackView.arrangedSubviews[item - 4 - 1].backgroundColor = item <= targetPIN ?  UIColor.textColor() : UIColor.lightDark()
             }
         }
-        print("fillDotColor")
     }
 }
-
-
 
 extension PasscodeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

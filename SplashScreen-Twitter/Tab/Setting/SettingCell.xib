@@ -17,46 +17,64 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.shield" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="021-Tf-UOV">
+                        <rect key="frame" x="20" y="10.5" width="25" height="24"/>
+                        <color key="tintColor" name="textColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="qYa-7u-YqL"/>
+                            <constraint firstAttribute="width" constant="25" id="wgT-6p-4sj"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Passcode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R01-X4-Nhn">
-                        <rect key="frame" x="63" y="15.5" width="184" height="14.5"/>
+                        <rect key="frame" x="53" y="15.5" width="224" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" name="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.shield" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="021-Tf-UOV">
-                        <rect key="frame" x="20" y="5.5" width="35" height="34"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ocn-Lu-dGd">
+                        <rect key="frame" x="285" y="17" width="15" height="11.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="textColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="qYa-7u-YqL"/>
-                            <constraint firstAttribute="width" constant="35" id="wgT-6p-4sj"/>
+                            <constraint firstAttribute="height" constant="15" id="hNd-vg-rtl"/>
+                            <constraint firstAttribute="width" constant="15" id="xa9-GW-8XY"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ocn-Lu-dGd">
-                        <rect key="frame" x="255" y="0.0" width="45" height="45"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ur-WB-Tpl">
+                        <rect key="frame" x="53" y="44" width="267" height="1"/>
+                        <color key="backgroundColor" name="textColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="45" id="hNd-vg-rtl"/>
-                            <constraint firstAttribute="width" constant="45" id="xa9-GW-8XY"/>
+                            <constraint firstAttribute="height" constant="1" id="I0v-Wb-gMI"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" name="bgDark"/>
                 <constraints>
+                    <constraint firstItem="Ocn-Lu-dGd" firstAttribute="centerY" secondItem="R01-X4-Nhn" secondAttribute="centerY" id="91E-KN-UU6"/>
                     <constraint firstItem="R01-X4-Nhn" firstAttribute="centerY" secondItem="021-Tf-UOV" secondAttribute="centerY" id="Ael-nx-58O"/>
-                    <constraint firstItem="Ocn-Lu-dGd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gzv-R6-89V"/>
-                    <constraint firstAttribute="bottom" secondItem="021-Tf-UOV" secondAttribute="bottom" constant="5" id="JIZ-Jp-9s5"/>
                     <constraint firstAttribute="trailing" secondItem="Ocn-Lu-dGd" secondAttribute="trailing" constant="20" symbolic="YES" id="Jjz-AU-qKb"/>
-                    <constraint firstAttribute="bottom" secondItem="Ocn-Lu-dGd" secondAttribute="bottom" id="Xni-AQ-bOL"/>
+                    <constraint firstItem="3ur-WB-Tpl" firstAttribute="leading" secondItem="R01-X4-Nhn" secondAttribute="leading" id="NfK-Bc-bwt"/>
+                    <constraint firstAttribute="trailing" secondItem="3ur-WB-Tpl" secondAttribute="trailing" id="Nj3-8W-wNw"/>
+                    <constraint firstItem="021-Tf-UOV" firstAttribute="centerY" secondItem="R01-X4-Nhn" secondAttribute="centerY" id="QLS-00-aP9"/>
                     <constraint firstItem="021-Tf-UOV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="Z21-Sq-bwr"/>
-                    <constraint firstItem="021-Tf-UOV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="dCG-ej-rMN"/>
+                    <constraint firstAttribute="bottom" secondItem="3ur-WB-Tpl" secondAttribute="bottom" id="gHi-s8-tHd"/>
                     <constraint firstItem="R01-X4-Nhn" firstAttribute="leading" secondItem="021-Tf-UOV" secondAttribute="trailing" constant="8" symbolic="YES" id="sa6-jw-o7D"/>
                     <constraint firstItem="Ocn-Lu-dGd" firstAttribute="leading" secondItem="R01-X4-Nhn" secondAttribute="trailing" constant="8" symbolic="YES" id="tWq-e5-vPy"/>
+                    <constraint firstItem="021-Tf-UOV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ySM-pF-q2O"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="borderBottomView" destination="3ur-WB-Tpl" id="TBP-Jo-KLY"/>
+                <outlet property="letLogo" destination="021-Tf-UOV" id="y5R-Ch-464"/>
+                <outlet property="rightIcon" destination="Ocn-Lu-dGd" id="XjB-oZ-42p"/>
+                <outlet property="title" destination="R01-X4-Nhn" id="34S-fV-Obh"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="67.96875"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>
         <namedColor name="bgDark">
             <color red="0.054999999701976776" green="0.059000000357627869" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

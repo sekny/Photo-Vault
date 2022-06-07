@@ -14,6 +14,7 @@ class PassCodeViewModel {
     private(set) var PINLength:Int = 4
     private let maxWrongPIN:Int = 3 //10
     private(set) var PINCode = ""
+    private(set) var NewPINCode = "" // using for change passcode only
     private(set) var totalWrongPIN:Int = 0
     private(set) var totalWrongPassword:Int = 0
     let keyValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9","a","0","x"]
@@ -63,14 +64,24 @@ class PassCodeViewModel {
         PINCode += pin
     }
     
+    func setNewPIN(_ pin: String) {
+        if NewPINCode.count == PINLength * 2 { return }
+        
+        NewPINCode += pin
+    }
+    
     func clearPIN() {
         PINCode = ""
+        NewPINCode = ""
     }
     
     func deleteLastPIN() {
-        PINCode = String(PINCode.count == 0 ? "" : PINCode.dropLast())
+        if NewPINCode.isEmpty {
+            PINCode = String(PINCode.count == 0 ? "" : PINCode.dropLast())
+        } else {
+            NewPINCode = String(NewPINCode.count == 0 ? "" : NewPINCode.dropLast())
+        }
     }
-    
     
     func insert() {
         if PINCode.count < PINLength {
@@ -86,24 +97,15 @@ class PassCodeViewModel {
         }
     }
     
-    func wrongPIN() {
-//        totalWrongPIN += 1
-//        
-//        let realm = try! Realm()
-//        let entity = realm.objects(UserInfo.self).last
-//        
-//        if entity != nil {
-//            var totalDisableByToday = entity!.totalDisableByToday + 1
-//            if entity?.lastBlockDate == nil || !Calendar.current.isDateInToday((entity?.lastBlockDate)!) {
-//                totalDisableByToday = 1
-//            }
-//            
-//  
-//            try! realm.write {
-//                entity?.lastBlockDate = Date.now
-//                entity?.totalDisableByToday = totalDisableByToday
-//            }
-//        }
+    func changePIN(_ newPIN: String) {
+        let realm = try! Realm()
+        let entity = realm.objects(UserInfo.self).last
+        
+        if entity != nil {
+            try! realm.write {
+                entity?.password = newPIN.encryptRNC(UserInfo.keyRNC)
+            }
+        }
     }
     
     func wrongPassword() {

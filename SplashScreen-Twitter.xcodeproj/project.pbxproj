@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61246CFA28505EBE00F01396 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61246CF928505EBE00F01396 /* CGFloatExtension.swift */; };
 		61491E3428486FDF00516DAB /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61491E3328486FDF00516DAB /* SettingModel.swift */; };
 		61533DB72846027800067A7C /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61533DB62846027800067A7C /* SettingViewModel.swift */; };
 		61533DB92846028400067A7C /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61533DB82846028400067A7C /* FavoriteViewModel.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		26B58D5B64C004377736D58B /* Pods-SplashScreen-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplashScreen-Twitter.debug.xcconfig"; path = "Target Support Files/Pods-SplashScreen-Twitter/Pods-SplashScreen-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
 		574B8C440688D9A88CC2FC85 /* Pods-SplashScreen-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplashScreen-Twitter.release.xcconfig"; path = "Target Support Files/Pods-SplashScreen-Twitter/Pods-SplashScreen-Twitter.release.xcconfig"; sourceTree = "<group>"; };
+		61246CF928505EBE00F01396 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		61491E3328486FDF00516DAB /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		61533DB62846027800067A7C /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		61533DB82846028400067A7C /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				61D1C21B283F35DD00FCF82C /* Date.swift */,
 				61773ECA2844BA930011D375 /* StringExtension.swift */,
 				6180B385284EEA2C00229E47 /* UIImageExtension.swift */,
+				61246CF928505EBE00F01396 /* CGFloatExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				61ABDCE5283DD18C0013F61F /* Document.swift in Sources */,
 				61773ECE2844C73B0011D375 /* PassCodeViewModel.swift in Sources */,
 				61D1C21C283F35DD00FCF82C /* Date.swift in Sources */,
+				61246CFA28505EBE00F01396 /* CGFloatExtension.swift in Sources */,
 				61C4892A283B38ED00668ECD /* AppDelegate.swift in Sources */,
 				61907748283DBFB2004524D6 /* MyTabBar.swift in Sources */,
 				615B8F1B283E1F77002D505F /* UIDevice.swift in Sources */,

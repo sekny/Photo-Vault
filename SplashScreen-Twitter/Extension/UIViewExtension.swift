@@ -24,4 +24,24 @@ extension UIView {
         }
        
     }
+    
+    func blur() {
+//        // Init a UIVisualEffectView which going to do the blur for us
+//        let blurView = UIVisualEffectView()
+//        // Make its frame equal the main view frame so that every pixel is under blurred
+//        blurView.frame = self.frame
+//        // Choose the style of the blur effect to regular.
+//        // You can choose dark, light, or extraLight if you wants
+//        blurView.effect = UIBlurEffect(style: style)
+//        // Now add the blur view to the main view
+//        self.addSubview(blurView)
+        
+        
+        let blur = UIBlurEffect(style: .extraLight)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.layer.opacity = 0.2
+        self.addSubview(blurView)
+    }
 }

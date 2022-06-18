@@ -9,6 +9,7 @@ import UIKit
 import SwiftIcons
 import PhotosUI
 import RealmSwift
+import SnapKit
 
 class HomeViewController: UITabBarController, UITabBarControllerDelegate, PHPickerViewControllerDelegate {
     var phPickerConfig = PHPickerConfiguration(photoLibrary: .shared())
@@ -21,9 +22,14 @@ class HomeViewController: UITabBarController, UITabBarControllerDelegate, PHPick
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        setup()
         setupMiddleButton()
         phPickerConfig.selectionLimit = 500
         phPickerConfig.filter = PHPickerFilter.any(of: [.images])
+    }
+    
+    func setup() {
+        self.tabBar.items?[2].isEnabled = true
     }
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
@@ -157,17 +163,22 @@ class HomeViewController: UITabBarController, UITabBarControllerDelegate, PHPick
     
     // TabBarButton – Setup Middle Button
     func setupMiddleButton() {
-        let middleBtn = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 35, y: -30, width: 70, height: 70))
-
+        let middleBtn = UIButton(type: .custom)
         //STYLE THE BUTTON YOUR OWN WAY
+        
+        //add to the tabbar and add click event
+        self.view.addSubview(middleBtn)
+        middleBtn.snp.makeConstraints { con in
+            con.width.height.equalTo(70)
+            con.center.equalTo(self.tabBar)
+            con.bottom.equalTo(self.tabBar).offset(-45)
+        }
+        
         middleBtn.setIcon(icon: .fontAwesomeSolid(.plus), iconSize: 20.0, color: UIColor.white, backgroundColor: UIColor.white, forState: .normal)
         middleBtn.applyGradient(colors: [UIColor.lightDark().cgColor, UIColor.textColor().cgColor])
-
-        //add to the tabbar and add click event
-        self.tabBar.addSubview(middleBtn)
+        
         middleBtn.addTarget(self, action: #selector(self.menuButtonAction), for: .touchUpInside)
 
-        self.tabBar.items?[2].isEnabled = false
         self.tabBar.tintColor = UIColor.textColor()
         self.view.layoutIfNeeded()
     }

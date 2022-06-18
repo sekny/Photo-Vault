@@ -45,11 +45,14 @@ class SettingViewController: UIViewController {
         switch type {
         case .About:
             let vc = AboutViewController.instantiateVC(storyboardName: Storyboards.About.rawValue)
-            self.navigationController?.pushViewController(vc, animated: true)
+//            self.navigationController?.pushViewController(vc, animated: true)
+            self.present(vc, animated: true)
+            
         case .ChangePasscode:
             let vc = PasscodeViewController.instantiateVC(storyboardName: Storyboards.Passcode.rawValue)
             vc.isChangePasscode = true
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.present(vc, animated: true)
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

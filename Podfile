@@ -12,4 +12,5 @@ target 'SplashScreen-Twitter' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RNCryptor'
+  pod 'SnapKit', '~> 5.6.0'
 end

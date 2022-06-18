@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIColor {
-    public class func bgColor() -> UIColor{
+    public class func bgColor() -> UIColor {
         return UIColor(hexString: "#0E0F1C")
     }
     
@@ -19,6 +19,14 @@ extension UIColor {
     
     public class func textColor() -> UIColor {
         return UIColor(hexString: "#C5C5FF")
+    }
+    
+    public class func primaryDark() -> UIColor {
+        return UIColor(hexString: "#1d1b1b")
+    }
+    
+    public class func shadow() -> UIColor {
+        return UIColor(hexString: "#494949")
     }
     
     
